@@ -13,11 +13,11 @@ import java.util.*;
 public class ServiceTienda {
     
     private Scanner read;
-    private HashMap<String,Double> productos;
+    private HashMap<String,Double> productos=new HashMap();
 
     public ServiceTienda() {
         this.read=new Scanner(System.in);
-        this.productos=new HashMap();
+        //this.productos=new HashMap();
     }
     
     public Tienda crearProducto(){

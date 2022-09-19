@@ -1,15 +1,16 @@
 
 package ejercicio3extra.entity;
 
-public class Libro {
+public class Libro implements Comparable<Libro>{
     
     private String titulo;
     private String autor;
-    private static Integer numerodeEjemplares=0;
+    private  Integer numerodeEjemplares=0;
     private Integer numerodeEjemplaresPrestados;
 
     public Libro() {
-        numerodeEjemplares++;
+        numerodeEjemplares=0;
+        numerodeEjemplaresPrestados=0;
     }
 
     public Libro(String titulo, String autor, Integer numerodeEjemplares, Integer numerodeEjemplaresPrestados) {
@@ -53,7 +54,12 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", numerodeEjemplares=" + numerodeEjemplares + ", numerodeEjemplaresPrestados=" + numerodeEjemplaresPrestados + '}';
+        return "titulo=" + titulo + ", autor=" + autor + ", numerodeEjemplares=" + numerodeEjemplares + ", numerodeEjemplaresPrestados=" + numerodeEjemplaresPrestados ;
+    }
+
+    @Override
+    public int compareTo(Libro t) {
+        return this.titulo.compareTo(t.getTitulo());
     }
     
 
