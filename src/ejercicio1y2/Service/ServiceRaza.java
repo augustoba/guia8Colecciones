@@ -17,6 +17,7 @@ public class ServiceRaza {
 
     private List<Raza> perros ;
     private Scanner read ;
+    private List<Raza> perrosDisponibles ;
 
     public ServiceRaza() {
         this.perros= new ArrayList();
@@ -50,7 +51,7 @@ public class ServiceRaza {
     }
 
     private void mostrarRazas() {
-        for (Raza aux : perros) {
+        for (Raza aux : perrosDisponibles) {
             System.out.println(aux);
         }
     }

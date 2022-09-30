@@ -28,10 +28,7 @@ public class ServiceAlumno {
         this.read = new Scanner(System.in);
     }
 
-    private Alumno crearAlumno() {
-        Alumno alumno = new Alumno();
-        return alumno;
-    }
+    
 
     private void cargarAlumnos() {
 
